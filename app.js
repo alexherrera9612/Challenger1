@@ -51,7 +51,7 @@ function encriptamiento() {
         document.querySelector('.advertencia').classList.remove('error');
         console.log(palabra_encriptada);
     }else{
-        alert("¡Tu mensaje contiene algún error!\n\nTu mensaje contiene mayusculas, caracteres especiales y/o letras con acentos");
+        alert("¡Tu mensaje contiene algún errorr!\n\nTu mensaje contiene mayusculas, caracteres especiales y/o letras con acentos");
         document.querySelector('.advertencia').classList.add('error');
     }
     
