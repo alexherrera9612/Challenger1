@@ -18,7 +18,6 @@ function eventos() {
     encriptar.addEventListener('click', encriptamiento);
     document.getElementById("pegarbtn").addEventListener("click", pegarTexto);
 }
-/* Proceso de encriptamiento de la palabra que digite el usuario */
 function encriptamiento() {
     palabra_encriptada = '';
     rectificacion.lastIndex = 0;
@@ -51,7 +50,7 @@ function encriptamiento() {
         document.querySelector('.advertencia').classList.remove('error');
         console.log(palabra_encriptada);
     }else{
-        alert("¡Tu mensaje contiene algún errorr!\n\nTu mensaje contiene mayusculas, caracteres especiales y/o letras con acentos");
+        alert("¡Tu mensaje contiene algún error!\n\nTu mensaje contiene mayusculas, caracteres especiales y/o letras con acentos");
         document.querySelector('.advertencia').classList.add('error');
     }
     
@@ -67,16 +66,12 @@ function desencriptamiento() {
             'ober': 'o',
             'ufat': 'u'
         };
-        // Utilizar una expresión regular para buscar todas las coincidencias
         const regex = new RegExp(Object.keys(sustituciones).join('|'), 'g');
 
-        // Realizar el reemplazo utilizando la función de sustitución
         palabra_desencriptada  = palabra_desencriptada .replace(regex, (match) => sustituciones[match]);
-        // Actualizar el contenido de mensajeBandeja
         text_desencriptar.value = palabra_desencriptada;
         text_encriptar.value = '';
         console.log(palabra_desencriptada)
-        // Volver a agregar el evento de clic al botón de copiar
         copiar.addEventListener('click', copiarContenido);   
     }
     else{
@@ -86,15 +81,11 @@ function desencriptamiento() {
         
 }
 function copiarContenido() {
-    // Obtener el contenido de #textocodificado
     const contenidoParaCopiar = document.querySelector('#textocodificado').value;
 
-    // Copiar el contenido al portapapeles
     navigator.clipboard.writeText(contenidoParaCopiar).then(() => {
-        // Mostrar mensaje de éxito
         alert("texto copiado al portapapeles");
     }).catch((err) => {
-        // Manejar errores
         console.log('Algo ocurrió al momento de copiar: ', err);
     });
 
