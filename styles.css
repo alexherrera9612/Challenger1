@@ -9,29 +9,28 @@ header {
     background-color: #ADD8E6;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0; /* Reducir el padding vertical */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: block;
 }
 
 header h1 {
-    color: #ffffff;
-    font-size: 48px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 5px; /* Reducir el margen inferior */
+    display: inline-block;
+
 }
 
 header h2 {
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 18px; /* Reducir el tamaño del subtítulo */
+    margin-bottom: 10px; /* Reducir el margen inferior */
+    display: inline-block;
+
 }
 
-.logo img {
-    width: 100px;
-    margin-top: -10px;
+.imgheader{
+    width: 70px;
+    display: inline-block;
 }
 
 .contenedor-encriptador {
@@ -142,13 +141,19 @@ footer {
     background-color: #ADD8E6;
     color: black;
     text-align: center;
-    padding: 50px 0;
+    padding: 10px 0;
+    font-size: 10px;
 }
 
-.footer-content {
-    display: block;
+.contenedor-footer {
+    display: inline;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     width: 100px;
+    text-align: center;
+}
+
+.imgfooter {
+    width: 60px;
 }

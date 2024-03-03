@@ -6,7 +6,7 @@ let copiar = document.querySelector('#copiarbtn');
 let palabra_encriptada = ''; 
 let palabra_desencriptada = ''; 
 
-const rectificacion = /[0-9A-Z-ÁÉÍÓÚÜáéíóúü#$@"'()\[\]{}+*~^-_.:,;<>?¿¡|°¬=&%]/g;
+const rectificacion = /[0-9A-Z-ÁÉÍÓÚÜáéíóúü#$@"'()\[\]{}+*~^-_.:,;<>?¿¡|´°¬=&%]/g;
 let cantidadPrecionado = 0
 
 document.addEventListener('DOMContentLoaded',()=>{
